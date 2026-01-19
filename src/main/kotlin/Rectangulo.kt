@@ -16,19 +16,18 @@ class Rectangulo(val base:Double, val altura:Double){
         require(base > 0) { "La base debe ser mayor a 0" }
     }
 
-    override fun toString(): String = "El rectangulo tiene una base de ${this.base} y una altura de ${this.altura} "
-
     fun calcularArea():Double{
         val area: Double = base * altura
-        println(area)
         return area
     }
 
     fun calcularPerimetro():Double{
         val perimetro: Double = (base * 2) + (altura * 2)
-        println(perimetro)
         return perimetro
     }
+
+    override fun toString(): String = "El rectangulo tiene un base de ${calcularArea()} y una altura de ${calcularPerimetro()} "
+
 }
 
 fun main(){
